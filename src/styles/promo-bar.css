@@ -1,0 +1,35 @@
+.promo-bar {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.promo-close {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 5px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-close:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .promo-bar {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}

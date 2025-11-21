@@ -1,0 +1,122 @@
+.hero-section {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 600ms cubic-bezier(0.22, 0.9, 0.35, 1);
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.35), transparent);
+  pointer-events: none;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.197);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.carousel-nav>img{
+  width: 15px;
+}
+
+.carousel-nav.prev {
+  left: 20px;
+  padding-right: 5px;
+}
+
+.carousel-nav.next {
+  right: 20px;
+}
+
+.carousel-nav:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.carousel-nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 25;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: transparent;
+  background: rgba(70, 70, 70, 0.49);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.indicator.active {
+  background: #92c13d;
+  width: 40px;
+  border-radius:10px;
+
+}
+
+.indicator:disabled {
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 350px;
+  }
+  .hero-carousel {
+    height: 300px;
+  }
+  .carousel-nav.prev {
+    left: 10px;
+  }
+  .carousel-nav.next {
+    right: 10px;
+  }
+}
