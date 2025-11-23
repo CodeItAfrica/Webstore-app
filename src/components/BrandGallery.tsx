@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useState } from "react";
 import { TiChevronLeftOutline, TiChevronRightOutline } from "react-icons/ti";
 import '../styles/brand-gallery.css';

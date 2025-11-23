@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/feature-bar.css';
 
 export default function FeatureBar() {

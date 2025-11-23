@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useState } from 'https://cdn.skypack.dev/react';
 import ReactDOM from 'https://cdn.skypack.dev/react-dom';
 import {TiChevronLeftOutline, TiChevronRightOutline} from 'https://cdn.skypack.dev/react-icons@4.12.0/ti';

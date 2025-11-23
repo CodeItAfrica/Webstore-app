@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/why-buy.css';
 
 export default function WhyBuySection() {

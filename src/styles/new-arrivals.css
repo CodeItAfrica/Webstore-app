@@ -1,0 +1,125 @@
+/* Enhanced flash sale with animations */
+.new-arrivals {
+    background-color: #fff;
+    padding: 50px 20px;
+    padding-top: 0px;
+  }
+  
+  .new-arrivals-container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .new-arrivals-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeInDown 0.6s ease-out;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .new-arrivals-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    animation: titlePop 0.6s ease-out;
+  }
+  
+  @keyframes titlePop {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+    
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 40px;
+    animation: staggeredFadeIn 0.8s ease-out 0.3s both;
+  }
+  
+  @keyframes staggeredFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .products-grid > * {
+    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .products-grid > *:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .products-grid > *:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .products-grid > *:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  .products-grid > *:nth-child(n+5) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .new-arrivals {
+      padding: 30px 15px;
+    }
+  
+    .new-arrivals-header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+  
+    .new-arrivals-header h2 {
+      font-size: 28px;
+    }
+  
+  
+    .products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 15px;
+    }
+  
+  }
+  
+  
+  

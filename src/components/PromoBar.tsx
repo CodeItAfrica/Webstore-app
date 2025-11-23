@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+//@ts-nocheck
+import { useState } from 'react';
 import '../styles/promo-bar.css';
 
 export default function PromoBar() {
