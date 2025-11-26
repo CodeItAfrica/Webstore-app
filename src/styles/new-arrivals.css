@@ -1,125 +1,245 @@
-/* Enhanced flash sale with animations */
 .new-arrivals {
-    background-color: #fff;
-    padding: 50px 20px;
-    padding-top: 0px;
+  background-color: #fff;
+  padding: 20px 15px;
+}
+
+.new-arrivals-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.new-arrivals-header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.new-arrivals-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin: 0;
+  animation: titlePop 0.6s ease-out;
+}
+
+@keyframes titlePop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  animation: staggeredFadeIn 0.8s ease-out 0.3s both;
+  padding: 0 20px;
+}
+
+@keyframes staggeredFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.products-grid > * {
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.products-grid > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.products-grid > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.products-grid > *:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.products-grid > *:nth-child(n + 5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.oraimo-awards {
+  background-size: cover;
+  background-position: center;
+  margin: 15px 0;
+  height: 200px;
+  border-radius: 8px;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .new-arrivals {
+    padding: 40px 15px;
+  }
+
   .new-arrivals-container {
-    max-width: 1300px;
-    margin: 0 auto;
+    padding: 0 10px;
   }
-  
+
   .new-arrivals-header {
-    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .new-arrivals-header h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  .oraimo-awards {
+    height: 25rem;
+    margin: 30px 0;
+  }
+}
+
+/* Mobile breakpoint with adjusted grid and spacing */
+@media (max-width: 768px) {
+  .new-arrivals {
+    padding: 30px 0;
+  }
+
+  .new-arrivals-container {
+    padding: 0 15px;
+  }
+
+  .new-arrivals-header {
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .new-arrivals-header h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    padding: 0;
+  }
+
+  .oraimo-awards {
+    height: 20rem;
+    margin: 20px 0;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .new-arrivals {
+    padding: 20px 0;
+  }
+
+  .new-arrivals-container {
+    padding: 0 10px;
+  }
+
+  .new-arrivals-header h2 {
+    font-size: 18px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+
+  .oraimo-awards {
+    height: 15rem;
+    margin: 15px 0;
+  }
+}
+
+/* Tablet: Larger products and spacing */
+@media (min-width: 768px) {
+  .new-arrivals {
+    padding: 30px 20px;
+  }
+
+  .new-arrivals-header {
+    margin-bottom: 25px;
+  }
+
+  .new-arrivals-header h2 {
+    font-size: 22px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+
+  .oraimo-awards {
+    height: 250px;
+    margin: 20px 0;
+  }
+}
+
+/* Desktop: Full grid layout */
+@media (min-width: 1024px) {
+  .new-arrivals {
+    padding: 50px 20px;
+  }
+
+  .new-arrivals-header {
     margin-bottom: 40px;
-    flex-wrap: wrap;
-    gap: 20px;
-    animation: fadeInDown 0.6s ease-out;
   }
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+
   .new-arrivals-header h2 {
     font-size: 20px;
-    font-weight: 700;
-    color: #2a2a2a;
-    margin-bottom: 20px;
-    animation: titlePop 0.6s ease-out;
   }
-  
-  @keyframes titlePop {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-    
+
   .products-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 40px;
-    animation: staggeredFadeIn 0.8s ease-out 0.3s both;
   }
-  
-  @keyframes staggeredFadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+
+  .oraimo-awards {
+    height: 300px;
+    margin: 40px 0;
   }
-  
-  .products-grid > * {
-    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .products-grid > *:nth-child(2) {
-    animation-delay: 0.1s;
-  }
-  
-  .products-grid > *:nth-child(3) {
-    animation-delay: 0.2s;
-  }
-  
-  .products-grid > *:nth-child(4) {
-    animation-delay: 0.3s;
-  }
-  
-  .products-grid > *:nth-child(n+5) {
-    animation-delay: 0.4s;
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .new-arrivals {
-      padding: 30px 15px;
-    }
-  
-    .new-arrivals-header {
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 30px;
-    }
-  
-    .new-arrivals-header h2 {
-      font-size: 28px;
-    }
-  
-  
-    .products-grid {
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 15px;
-    }
-  
-  }
-  
-  
-  
+}

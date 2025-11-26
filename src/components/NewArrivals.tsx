@@ -100,6 +100,8 @@ export default function NewArrivals() {
           ))}
         </div>
       </div>
+      <div className="oraimo-awards" style={{ backgroundImage: 'url("/News.webp")' }} >
+    </div>
     </section>
   );
 }

@@ -1,41 +1,44 @@
 .footer {
   background-color: #2a2a2a;
   color: #fff;
-  padding: 50px 20px 20px;
+  padding: 20px 15px;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .footer-section h4 {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .footer-section ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .footer-section a {
   color: #bbb;
   text-decoration: none;
-  font-size: 13px;
-  transition: color 0.3s;
+  font-size: 10px;
+  transition: color 0.2s;
 }
 
 .footer-section a:hover {
@@ -45,32 +48,70 @@
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .footer-bottom {
   border-top: 1px solid #444;
-  padding-top: 20px;
+  padding-top: 15px;
   text-align: center;
   color: #999;
-  font-size: 13px;
+  font-size: 10px;
 }
 
-@media (max-width: 768px) {
+/* Tablet breakpoint */
+/* Tablet: 2-column layout */
+@media (min-width: 768px) {
   .footer {
-    padding: 30px 20px 15px;
+    padding: 35px 20px 20px;
   }
 
   .footer-content {
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   .footer-section h4 {
     font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .footer-section a {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding-top: 20px;
+  }
+}
+
+/* Mobile breakpoint with stacked layout */
+/* Small mobile breakpoint */
+/* Desktop: 4-column layout */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 50px 20px 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-section h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
   }
 
   .footer-section a {
     font-size: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding-top: 20px;
   }
 }

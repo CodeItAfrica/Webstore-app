@@ -1,12 +1,12 @@
 .promo-bar {
   background-color: #2a2a2a;
   color: #fff;
-  padding: 12px 20px;
+  padding: 8px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  gap: 10px;
+  font-size: 10px;
+  gap: 8px;
 }
 
 .promo-close {
@@ -14,22 +14,79 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  font-size: 18px;
-  padding: 0 5px;
-  height: 24px;
-  width: 24px;
+  font-size: 14px;
+  padding: 0 4px;
+  height: 20px;
+  width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
 }
 
 .promo-close:hover {
   opacity: 0.7;
 }
 
-@media (max-width: 768px) {
+/* Tablet: Increase padding and font size */
+@media (min-width: 768px) {
   .promo-bar {
     font-size: 12px;
-    padding: 8px 15px;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .promo-close {
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    padding: 0 6px;
+  }
+}
+
+/* Desktop: Full-size promo bar */
+@media (min-width: 1024px) {
+  .promo-bar {
+    font-size: 14px;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  .promo-close {
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .promo-bar {
+    font-size: 11px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .promo-close {
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .promo-bar {
+    font-size: 10px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .promo-close {
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    padding: 0 3px;
   }
 }

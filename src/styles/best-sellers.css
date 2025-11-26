@@ -1,172 +1,209 @@
 .best-sellers-section {
-    padding: 60px 0px;
-    padding-top: 0px;
-    overflow: hidden;
-  }
-  
-  .best-container {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  
-  .best-section-header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  .best-section-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #2a2a2a;
-    margin-bottom: 10px;
+  padding: 20px 15px;
+  overflow: hidden;
+}
+
+.best-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.best-section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.best-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 8px;
+}
+
+.best-section-subtitle {
+  font-size: 13px;
+  color: #666;
+}
+
+.oraimo-awards {
+  background-size: cover;
+  background-position: center;
+  margin: 15px 0;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.best-carousel-wrapper {
+  position: relative;
+  padding: 0 20px;
+}
+
+.best-products-carousel {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.best-carousel-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 600ms cubic-bezier(0.22, 0.9, 0.35, 1);
+}
+
+.best-products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  height: 100%;
+}
+
+.best-carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.best-carousel-nav-btn.best-prev {
+  left: 5px;
+}
+
+.best-carousel-nav-btn.best-next {
+  right: 5px;
+}
+
+.best-carousel-nav-btn:active {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.best-carousel-indicators {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.best-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(70, 70, 70, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.best-indicator.active {
+  background: #92c13d;
+  width: 24px;
+  border-radius: 10px;
+}
+
+/* Tablet: 2-column grid */
+@media (min-width: 768px) {
+  .best-sellers-section {
+    padding: 30px 20px;
   }
 
-  .oraimo-awards{
-      background-size: cover;
-      background-position: center;
-      margin: 40px 0px;
-height: 30rem;      
+  .best-section-header {
+    margin-bottom: 25px;
   }
-  
-  .best-section-subtitle {
-    font-size: 16px;
-    color: #666;
+
+  .best-section-title {
+    font-size: 22px;
   }
-  
+
+  .oraimo-awards {
+    height: 250px;
+    margin: 20px 0;
+  }
+
   .best-carousel-wrapper {
-    position: relative;
+    padding: 0 30px;
+  }
+
+  .best-products-carousel {
+    height: 350px;
+  }
+
+  .best-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .best-carousel-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .best-carousel-indicators {
+    gap: 10px;
+    margin-top: 20px;
+  }
+}
+
+/* Desktop: 4-column grid */
+@media (min-width: 1024px) {
+  .best-sellers-section {
+    padding: 60px 20px;
+  }
+
+  .best-section-header {
+    margin-bottom: 50px;
+  }
+
+  .best-section-title {
+    font-size: 20px;
+  }
+
+  .oraimo-awards {
+    height: 300px;
+    margin: 40px 0;
+  }
+
+  .best-carousel-wrapper {
     padding: 0 60px;
   }
-  
+
   .best-products-carousel {
-    position: relative;
     height: 480px;
-    overflow: hidden;
   }
-  
-  .best-carousel-group {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 600ms cubic-bezier(0.22, 0.9, 0.35, 1);
-  }
-  
+
   .best-products-grid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    height: 100%;
   }
-  
-  /* Navigation Buttons */
+
   .best-carousel-nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.2);
     width: 45px;
     height: 45px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 20;
-    transition: all 0.3s ease;
-    color: #fff;
   }
-  
-  .best-carousel-nav-btn.best-prev {
-    left: 0;
-  }
-  
-  .best-carousel-nav-btn.best-next {
-    right: 0;
-  }
-  
-  .best-carousel-nav-btn:hover {
-    background: rgba(0, 0, 0, 0.4);
-    transform: translateY(-50%) scale(1.05);
-  }
-  
-  /* Indicators */
+
   .best-carousel-indicators {
-    display: flex;
     gap: 12px;
-    justify-content: center;
     margin-top: 30px;
   }
-  
+
   .best-indicator {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(70, 70, 70, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
   }
-  
+
   .best-indicator.active {
-    background: #92c13d;
     width: 40px;
-    border-radius: 10px;
   }
-  
-  /* Responsive */
-  @media (max-width: 1280px) {
-    .best-products-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .best-products-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .best-carousel-wrapper {
-      padding: 0 50px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .best-products-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-    .best-products-carousel {
-      height: 520px;
-    }
-    .best-section-title {
-      font-size: 28px;
-    }
-    .best-carousel-wrapper {
-      padding: 0 40px;
-    }
-    .best-carousel-nav-btn {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .best-products-grid {
-      grid-template-columns: 1fr;
-    }
-    .best-products-carousel {
-      height: 460px;
-    }
-    .best-sellers-section {
-      padding: 40px 15px;
-    }
-    .best-section-header {
-      margin-bottom: 30px;
-    }
-    .best-carousel-wrapper {
-      padding: 0 35px;
-    }
-  }
-  
+}

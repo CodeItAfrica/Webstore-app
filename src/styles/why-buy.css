@@ -1,120 +1,287 @@
+:root {
+  --primary-green: #2ecc71;
+  --text-dark: #222;
+  --text-light: #9aa;
+  --border-color: rgba(0, 0, 0, 0.06);
+  --transition: 250ms ease-out;
+}
+
+/* container */
 .why-buy {
-  background-color: #f5f5f5;
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, white 100%);
+  padding: 0px 20px;
+  margin: 0px 0px;
 }
 
 .why-buy-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 20px 0px;
+  z-index: 5;
+  height: 230vh;
 }
 
-.why-buy h2 {
-  font-size: 32px;
+.why-buy-title {
+  font-size: 25px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 40px;
-  color: #2a2a2a;
+  color: var(--text-dark);
+  position: sticky;
+  top: 90px;
 }
 
-.reasons-grid {
+/* grid */
+.why-buy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+  margin: auto;
+  padding-top: 115vh;
+  max-height: 156vh;
 }
 
-.reason-card {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 4px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s;
+/* card base */
+.why-buy-card {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  width: 22vw;
+  height: 43vh;
 }
 
-.reason-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.span-two-rows{
+  grid-row: span 2; 
 }
 
-.reason-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
 
-.reason-card h3 {
-  font-size: 13px;
+
+/* card title */
+.card-title {
+  font-size: 14px;
   font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 8px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
   text-transform: uppercase;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
-.reason-card p {
-  font-size: 12px;
-  color: #666;
-}
-
-.instagram-section {
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 4px;
+/* center card */
+.centered-card {
+  grid-column: span 2;
+  color: white;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('/WHY-BUY.png');
+  /* center contents inside the card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  top: 10%;
+  /* base size for scaling */
+  width: 45vw;
+  height: 43vh;
+  /* sticky vertical centering */
+  position: sticky;
+  justify-self: center;
+  transform-origin: center center;
+  border-radius: 5px;
+  z-index: 5;
 }
 
-.instagram-section h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #2a2a2a;
+/* hidden other cards */
+.hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
 }
 
-.instagram-section p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 25px;
-  line-height: 1.6;
+/* center badge content */
+.center-badge-content {
+  transform: scale(1);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
-.follow-btn {
-  background-color: #92c13d;
-  color: #fff;
-  border: none;
-  padding: 12px 32px;
-  font-size: 14px;
+
+.center-card-inner {
+  /* prevents children from inheriting stretch */
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-label {
+  font-size: 1.2rem;
   font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  margin-bottom: 10px;
 }
 
-.follow-btn:hover {
-  background-color: #7aa830;
+.no1-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
 }
 
+.crown {
+  font-size: 2rem;
+}
+
+.no1-text {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.center-sublabel {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* progress bar */
+.center-progress {
+  width: 70%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  margin: 14px auto 0;
+  overflow: hidden;
+}
+
+.center-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 6px;
+  transition: width 250ms linear;
+}
+
+/* benefits */
+.benefit-card {
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  gap: 15px;
+  width: 22vw;
+  height: 30vh;
+  color: black;
+  font-weight: 600;
+  justify-content: top;
+  z-index: 5;
+
+}
+
+.why-buy-card>div{
+  display: flex;
+  justify-content: center;
+  height: 90%;
+  
+}
+.benefit-card>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  
+}
+
+.why-buy-card>div>img{
+  width: 260px;
+}
+
+.why-buy-card>h3{
+  font-size: 16px;
+}
+.benefit-card>h3{
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.benefit-card>div>img{
+  width: 90%;
+  height: 85%;
+}
+
+.benefit-card[data-id="2"] >div>img{
+  width: 45%;
+  height: 80%;
+}
+
+.benefit-card[data-id="3"] >div>img{
+  width: 60%;
+  height: 95%;
+}
+
+.benefit-card[data-id="4"] >div>img{
+  width: 90%;
+  height: 75%;
+}
+
+
+
+
+.why-buy-card:nth-child(4){
+  height: calc(60vh + 20px);
+  padding: 10px 10px 0px 10px;
+}
+.why-buy-card:nth-child(4)>div{
+  height: 90%;
+}
+
+.why-buy-card:nth-child(4)>h3{
+  height: 10%;
+
+}
+
+.why-buy-card:nth-child(4)>div>img{
+  width: 100%;
+}
+
+.span-two-columns{
+  grid-column: span 2;
+  width: 100%;
+}
+
+/* responsive */
 @media (max-width: 768px) {
-  .reasons-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .why-buy-grid {
+    grid-template-columns: 1fr;
     gap: 15px;
   }
-
-  .reason-card {
-    padding: 20px 15px;
+  .why-buy-title {
+    font-size: 24px;
+    margin-bottom: 30px;
   }
-
-  .reason-card h3 {
+  .why-buy-card {
+    min-height: 180px;
+    padding: 20px;
+  }
+  .card-title {
     font-size: 12px;
   }
-
-  .instagram-section {
-    padding: 30px 20px;
-  }
-
-  .instagram-section h3 {
-    font-size: 20px;
-  }
-
-  .instagram-section p {
-    font-size: 13px;
+  .center-progress {
+    width: 80%;
   }
 }

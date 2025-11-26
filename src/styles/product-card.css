@@ -1,10 +1,10 @@
 /* Enhanced product card with improved hover animations */
 .product-card {
   background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s ease;
   cursor: pointer;
   animation: slideUp 0.6s ease-out;
 }
@@ -21,9 +21,13 @@
 }
 
 .product-card:hover {
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   border-color: #92c13d;
+  transform: translateY(-8px);
+}
+
+.product-card:active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .product-image-container {
@@ -38,23 +42,23 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover .product-image {
-  transform: scale(1.12);
+  transform: scale(1.08);
 }
 
 .badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   background-color: #e63946;
   color: #fff;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
   animation: badgeBounce 0.5s ease-out;
 }
 
@@ -70,15 +74,15 @@
 }
 
 .product-info {
-  padding: 14px;
+  padding: 10px;
 }
 
 .rating {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
-  font-size: 12px;
+  gap: 4px;
+  margin-bottom: 6px;
+  font-size: 11px;
   animation: fadeIn 0.6s ease-out 0.1s both;
 }
 
@@ -93,7 +97,7 @@
 
 .stars {
   color: #ff9500;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .rating-value {
@@ -103,44 +107,49 @@
 
 .reviews {
   color: #999;
+  font-size: 10px;
 }
 
 .product-name {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
   color: #2a2a2a;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   line-height: 1.3;
-  min-height: 32px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 22px;
   animation: fadeIn 0.6s ease-out 0.15s both;
 }
 
 .pricing {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .price-row {
   display: flex;
-  gap: 8px;
-  margin-bottom: 6px;
+  gap: 6px;
   align-items: baseline;
+  margin-bottom: 4px;
   animation: fadeIn 0.6s ease-out 0.2s both;
 }
 
 .current-price {
   color: #ff9500;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .original-price {
   color: #999;
-  font-size: 12px;
+  font-size: 10px;
   text-decoration: line-through;
 }
 
 .discount-bar {
-  height: 4px;
+  height: 3px;
   background-color: #e0e0e0;
   border-radius: 2px;
   overflow: hidden;
@@ -151,7 +160,7 @@
 .discount-fill {
   background: linear-gradient(90deg, #ff9500, #ffb84d);
   height: 100%;
-  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.4s ease;
   animation: fillWidth 0.8s ease-out 0.3s both;
 }
 
@@ -162,33 +171,37 @@
 }
 
 .discount-label {
-  font-size: 11px;
+  font-size: 10px;
   color: #ff9500;
   font-weight: 600;
 }
 
 .product-actions {
   display: flex;
-  gap: 8px;
-  margin-top: 10px;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
 }
 
 .btn-secondary,
 .btn-primary {
-  flex: 1;
   border: none;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   animation: fadeIn 0.6s ease-out 0.25s both;
 }
 
 .btn-secondary {
   background-color: #e0e0e0;
   color: #2a2a2a;
+}
+
+.btn-secondary:active {
+  background-color: #d0d0d0;
 }
 
 .btn-secondary:hover {
@@ -202,27 +215,181 @@
 }
 
 /* Primary button enhanced hover with glow */
+.btn-primary:active {
+  background-color: #7aa830;
+}
+
 .btn-primary:hover {
   background-color: #7aa830;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(146, 193, 61, 0.3);
 }
 
+/* Tablet: Increase padding and font sizes */
+@media (min-width: 768px) {
+  .product-card {
+    border-radius: 8px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-name {
+    font-size: 12px;
+    min-height: 26px;
+  }
+
+  .rating {
+    font-size: 12px;
+  }
+
+  .current-price {
+    font-size: 13px;
+  }
+
+  .btn-secondary,
+  .btn-primary {
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .product-actions {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+
+/* Desktop: Enhanced spacing and hover effects */
+@media (min-width: 1024px) {
+  .product-card {
+    border-radius: 8px;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: #92c13d;
+  }
+
+  .product-info {
+    padding: 14px;
+  }
+
+  .product-name {
+    font-size: 13px;
+    min-height: 30px;
+  }
+
+  .rating {
+    font-size: 13px;
+  }
+
+  .current-price {
+    font-size: 14px;
+  }
+
+  .btn-secondary,
+  .btn-primary {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile breakpoint with simplified card layout */
 @media (max-width: 768px) {
   .product-card {
     animation: slideUp 0.6s ease-out;
   }
 
+  .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image-container {
+    aspect-ratio: 1;
+  }
+
+  .product-info {
+    padding: 10px;
+  }
+
   .product-name {
+    font-size: 11px;
+    min-height: 24px;
+  }
+
+  .rating {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .stars {
     font-size: 12px;
+  }
+
+  .current-price {
+    font-size: 13px;
+  }
+
+  .original-price {
+    font-size: 11px;
+  }
+
+  .discount-label {
+    font-size: 10px;
   }
 
   .product-actions {
     flex-direction: column;
+    gap: 6px;
   }
 
   .btn-secondary,
   .btn-primary {
-    font-size: 11px;
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .badge {
+    padding: 4px 8px;
+    font-size: 9px;
+    top: 6px;
+    right: 6px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .product-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .product-info {
+    padding: 8px;
+  }
+
+  .product-name {
+    font-size: 10px;
+    min-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  .pricing {
+    margin-bottom: 6px;
+  }
+
+  .price-row {
+    gap: 6px;
+  }
+
+  .current-price {
+    font-size: 12px;
+  }
+
+  .btn-secondary,
+  .btn-primary {
+    padding: 5px 6px;
+    font-size: 9px;
   }
 }

@@ -1,14 +1,15 @@
 .hero-section {
   position: relative;
-  min-height: 500px;
+  min-height: 250px;
   overflow: hidden;
-  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  background: #f9f9f9;
 }
 
 .hero-carousel {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 35vh;
+  min-height: 300px;
   overflow: hidden;
 }
 
@@ -31,7 +32,7 @@
 .gradient-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.35), transparent);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
   pointer-events: none;
 }
 
@@ -39,9 +40,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.197);
-  width: 45px;
-  height: 45px;
+  background: rgba(0, 0, 0, 0.25);
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -49,74 +50,208 @@
   align-items: center;
   justify-content: center;
   z-index: 20;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: all 0.2s ease;
 }
 
-.carousel-nav>img{
-  width: 15px;
+.carousel-nav img {
+  width: 12px;
 }
 
 .carousel-nav.prev {
-  left: 20px;
-  padding-right: 5px;
+  left: 10px;
 }
 
 .carousel-nav.next {
-  right: 20px;
+  right: 10px;
 }
 
 .carousel-nav:hover:not(:disabled) {
-  transform: translateY(-50%) scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.carousel-nav:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .carousel-indicators {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 12px;
+  gap: 8px;
   z-index: 25;
 }
 
 .indicator {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: transparent;
-  background: rgba(70, 70, 70, 0.49);
+  background: rgba(70, 70, 70, 0.4);
+  border: none;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .indicator.active {
   background: #92c13d;
-  width: 40px;
-  border-radius:10px;
-
+  width: 24px;
+  border-radius: 10px;
 }
 
 .indicator:disabled {
   cursor: not-allowed;
 }
 
+/* Tablet: Increase carousel height and nav size */
+@media (min-width: 768px) {
+  .hero-carousel {
+    height: 50vh;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-nav img {
+    width: 14px;
+  }
+
+  .carousel-nav.prev {
+    left: 15px;
+  }
+
+  .carousel-nav.next {
+    right: 15px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .indicator.active {
+    width: 32px;
+  }
+}
+
+/* Desktop: Full height carousel */
+@media (min-width: 1024px) {
+  .hero-carousel {
+    height: 70vh;
+  }
+
+  .carousel-nav {
+    width: 45px;
+    height: 45px;
+  }
+
+  .carousel-nav img {
+    width: 15px;
+  }
+
+  .carousel-nav.prev {
+    left: 20px;
+  }
+
+  .carousel-nav.next {
+    right: 20px;
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+  }
+
+  .indicator.active {
+    width: 40px;
+  }
+
+  .carousel-indicators {
+    bottom: 20px;
+    gap: 12px;
+  }
+}
+
+/* Mobile breakpoint with reduced height and smaller controls */
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 350px;
+    min-height: 300px;
   }
+
   .hero-carousel {
-    height: 300px;
+    height: 50vh;
   }
+
+  .carousel-nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-nav > img {
+    width: 12px;
+  }
+
   .carousel-nav.prev {
     left: 10px;
   }
+
   .carousel-nav.next {
     right: 10px;
+  }
+
+  .carousel-indicators {
+    bottom: 15px;
+    gap: 10px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .indicator.active {
+    width: 32px;
+  }
+}
+
+/* Small mobile breakpoint for very narrow screens */
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 250px;
+  }
+
+  .hero-carousel {
+    height: 40vh;
+  }
+
+  .carousel-nav {
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel-nav > img {
+    width: 10px;
+  }
+
+  .carousel-nav.prev {
+    left: 8px;
+    padding-right: 3px;
+  }
+
+  .carousel-nav.next {
+    right: 8px;
+  }
+
+  .carousel-indicators {
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .indicator.active {
+    width: 24px;
   }
 }
