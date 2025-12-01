@@ -1,4 +1,5 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import '../styles/Cart.css';
 import { useAppSelector, useAppDispatch } from '../store/hooks';
@@ -23,7 +24,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
     dispatch(removeFromCart(id));
   };
 
-  return (
+  return createPortal(
     <div className="cart-sidebar-overlay" onClick={onClose}>
       <div className="cart-sidebar" onClick={e => e.stopPropagation()}>
         <div className="cart-header">
@@ -89,7 +90,8 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
           <button className="checkout-btn">Checkout</button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

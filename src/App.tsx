@@ -4,8 +4,18 @@ import UnAuthStack from './stacks/UnAuthStack';
 import './App.css';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   const RouterSwitch: React.FC = () => {
     const { user, loading } = useAuth();
   

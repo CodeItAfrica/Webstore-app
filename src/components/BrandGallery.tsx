@@ -48,13 +48,13 @@ const BrandGallery = () => {
   return (<>
       <section className="brand-gallery">
       <div className="brand-gallery-container">
-    <div className="brand-gallery-header">
+    <div className="brand-gallery-header" data-aos="fade-right">
 <h2>
   Brand Gallery
   </h2>  
   </div>
 
-    <div className="carousel">
+    <div className="carousel" data-aos="zoom-in">
       <button className="nav left" style={active == 0 ? {color:"black", transition:"0.5s ease-in"}:{color:"white"}} onClick={handlePrev}>
         <TiChevronLeftOutline />
       </button>
@@ -85,19 +85,19 @@ const BrandGallery = () => {
     </div>
       </div>
       <div className="wrap-container">
-    <div style={{ backgroundImage: 'url("/fleximg1.webp")' }}>
+    <div style={{ backgroundImage: 'url("/fleximg1.webp")' }} data-aos="fade-up" data-aos-delay="0">
      <h2>Audio</h2>
      </div>
-     <div style={{ backgroundImage: 'url("/fleximg2.webp")' }}>
+     <div style={{ backgroundImage: 'url("/fleximg2.webp")' }} data-aos="fade-up" data-aos-delay="100">
      <h2>Power</h2>
      </div>
-     <div style={{ backgroundImage: 'url("/fleximg3.webp")' }}>
+     <div style={{ backgroundImage: 'url("/fleximg3.webp")' }} data-aos="fade-up" data-aos-delay="200">
      <h2>Smart & Office</h2>
      </div>
-     <div style={{ backgroundImage: 'url("/fleximg4.webp")' }}>
+     <div style={{ backgroundImage: 'url("/fleximg4.webp")' }} data-aos="fade-up" data-aos-delay="300">
      <h2>Personal Care</h2>
      </div>
-     <div style={{ backgroundImage: 'url("/fleximg5.webp")' }}>
+     <div style={{ backgroundImage: 'url("/fleximg5.webp")' }} data-aos="fade-up" data-aos-delay="400">
      <h2>Home Appliances</h2>
      </div>
 

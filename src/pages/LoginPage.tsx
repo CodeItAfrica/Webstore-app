@@ -1,4 +1,5 @@
 import type React from "react"
+import { useAuth } from "../auth/AuthProvider"
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
@@ -15,12 +16,19 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
+  const { login } = useAuth();
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    // TODO: Implement login logic
-    console.log("[v0] Login attempt:", { email })
-    setTimeout(() => setIsLoading(false), 1000)
+    try {
+      await login(email, password);
+      console.log("[v0] Login successful:", { email })
+    } catch (error) {
+      console.error("Login failed", error);
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleSocialLogin = (provider: string) => {
@@ -30,7 +38,7 @@ export default function LoginForm() {
 
   return (
     <div className="login-page-wrapper">
-      <div className="login-container">
+      <div className="login-container" data-aos="fade-up">
         <div className="login-content">
         {/* Header */}
         <div className="login-header">

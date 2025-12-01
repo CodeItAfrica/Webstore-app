@@ -85,7 +85,7 @@ export default function HeroSection() {
   });
 
   return (
-    <section className="hero-section">
+    <section className="hero-section" data-aos="fade-in">
       <div className="hero-carousel" ref={containerRef}>
         {visibleSlides.map((slide) => (
           <div

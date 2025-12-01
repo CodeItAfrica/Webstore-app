@@ -23,7 +23,7 @@ export default function FeatureBar() {
     <div className="feature-bar">
       <div className="feature-container">
         {features.map((feature, idx) => (
-          <div key={idx} className="feature-item">
+          <div key={idx} className="feature-item" data-aos="fade-up" data-aos-delay={idx * 200}>
             <div className="feature-icon"><img src={feature.icon} alt="" /></div>
             <div className="feature-content">
               <h4>{feature.title}</h4>

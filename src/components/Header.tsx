@@ -10,7 +10,7 @@ export default function Header() {
   const user = useAppSelector((state) => state.auth.user);
 
   return (
-    <header className="header">
+    <header className="header" data-aos="fade-down">
       <div className="header-container">
         <div className="logo">
           <span className="logo-text"><img src="/logo (1).png" alt="" /></span>

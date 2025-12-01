@@ -27,21 +27,19 @@ const FollowUs: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + posts.length) % posts.length)
   }
 
-  
-
   return (
     <section className="community-section">
       <div className="community-container">
-        <div className="community-header">
+        <div className="community-header" data-aos="fade-down">
           <h2 className="community-title">@oraimoclub</h2>
           <button className="follow-btn">Follow us</button>
         </div>
 
-        <div className="community-description">
+        <div className="community-description" data-aos="fade-in">
           <p>Are you an <strong>explorer</strong> at heart, always seeking new experiences? Join us at <strong>oraimo</strong> as we embark on exciting journeys together. Share your incredible moments with oraimo by posting your photos on Instagram using the hashtag <strong>#oraimoclub</strong> and tagging <strong>@oraimoclub</strong>. By doing so, you stand a chance to receive a special gift from us. Let's <strong>Keep Exploring</strong> and creating memories with <strong>oraimo</strong>! #oraimo #ExploreWithoraimo</p>
         </div>
 
-        <div className="community-carousel">
+        <div className="community-carousel" data-aos="zoom-in">
           <button className="carousel-control prev" onClick={prevSlide}>‹</button>
 
           <div className="posts-container">
@@ -72,7 +70,7 @@ const FollowUs: React.FC = () => {
           ))}
         </div>
 
-        <div className="social-links">
+        <div className="social-links" data-aos="fade-up">
           <h3 className="social-title">FOLLOW US</h3>
           <div className="social-icons">
             <a href="#" className="social-icon">📷</a>

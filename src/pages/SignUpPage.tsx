@@ -54,7 +54,7 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="signup-container">
+    <div className="signup-container" data-aos="fade-up">
       {/* Header */}
       <div className="signup-header">
         <h1 className="signup-title">Create Your oraimo Account</h1>

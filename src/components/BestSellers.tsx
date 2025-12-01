@@ -102,11 +102,11 @@ export default function BestSellers() {
   return (
 <section className="best-sellers-section">
   <div className="best-container">
-    <div className="best-section-header">
+    <div className="best-section-header" data-aos="fade-right">
       <h2 className="best-section-title">Best Seller</h2>
     </div>
 
-    <div className="best-carousel-wrapper">
+    <div className="best-carousel-wrapper" data-aos="fade-up">
       <div className="best-products-carousel">
         {visibleGroups.map((group) => (
           <div

@@ -8,7 +8,7 @@ export default function PromoBar() {
   if (!isVisible) return null;
 
   return (
-    <div className="promo-bar">
+    <div className="promo-bar" data-aos="fade-down">
 <marquee scrollamount="12">
   For COD orders exceeding 100,000 Naira, we will contact you for PREPAYMENT.
   Please be available to answer our call. Thanks!

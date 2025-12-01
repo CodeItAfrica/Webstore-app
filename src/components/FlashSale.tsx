@@ -144,7 +144,7 @@ export default function FlashSale() {
   return (
     <section className="flash-sale">
       <div className="flash-sale-container">
-        <div className="flash-sale-header">
+        <div className="flash-sale-header" data-aos="fade-down">
           <h2>Flash Sale</h2>
           <div className="countdown">
             <span className="end-label">End In</span>
@@ -167,8 +167,10 @@ export default function FlashSale() {
         </div>
 
         <div className="products-grid">
-          {flashSaleProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          {flashSaleProducts.map((product, idx) => (
+            <div key={product.id} data-aos="fade-up" data-aos-delay={idx * 100}>
+               <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </div>

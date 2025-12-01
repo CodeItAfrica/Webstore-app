@@ -18,8 +18,8 @@ const WhyBuySection: React.FC = () => {
       return () => window.removeEventListener("resize", onResize);
     }
 
-    const start = 75;
-    const end = 84;
+    const start = 70;
+    const end = 79;
     const minScale = 1;
     const maxScale = 2.199;
     const range = end - start;

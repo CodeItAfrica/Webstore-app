@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       {/* Subscription Section */}
-      <div className="footer-subscribe">
+      <div className="footer-subscribe" data-aos="fade-up">
         <div className="subscribe-container">
           <h2 className="subscribe-title">Subscribe now and earn 500 points!</h2>
           <p className="subscribe-subtitle">Get the Latest oraimo News and Giveaways</p>
@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="footer-container">
           <div className="footer-columns">
             {/* Customer Service */}
-            <div className="footer-column">
+            <div className="footer-column" data-aos="fade-up" data-aos-delay="0">
               <h3>Customer Service</h3>
               <div className="footer-info">
                 <p className="info-label">Service Hours:</p>
@@ -81,7 +81,7 @@ export default function Footer() {
             </div>
 
             {/* About oraimo */}
-            <div className="footer-column">
+            <div className="footer-column" data-aos="fade-up" data-aos-delay="100">
               <h3>About oraimo</h3>
               <ul>
                 <li><a href="#">About Us</a></li>
@@ -93,7 +93,7 @@ export default function Footer() {
             </div>
 
             {/* Terms */}
-            <div className="footer-column">
+            <div className="footer-column" data-aos="fade-up" data-aos-delay="200">
               <h3>Terms</h3>
               <ul>
                 <li><a href="#">Warranty</a></li>
@@ -105,7 +105,7 @@ export default function Footer() {
             </div>
 
             {/* Get Help */}
-            <div className="footer-column">
+            <div className="footer-column" data-aos="fade-up" data-aos-delay="300">
               <h3>Get Help</h3>
               <ul>
                 <li><a href="#">Track Order</a></li>

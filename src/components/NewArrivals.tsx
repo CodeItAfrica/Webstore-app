@@ -90,17 +90,19 @@ export default function NewArrivals() {
   return (
     <section className="new-arrivals">
       <div className="new-arrivals-container">
-        <div className="new-arrivals-header">
+        <div className="new-arrivals-header" data-aos="fade-right">
           <h2>New Arrivals</h2>
         </div>
 
         <div className="products-grid">
-          {flashSaleProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          {flashSaleProducts.map((product, idx) => (
+            <div key={product.id} data-aos="fade-up" data-aos-delay={idx * 100}>
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </div>
-      <div className="oraimo-awards" style={{ backgroundImage: 'url("/News.webp")' }} >
+      <div className="oraimo-awards" style={{ backgroundImage: 'url("/News.webp")' }} data-aos="fade-up">
     </div>
     </section>
   );

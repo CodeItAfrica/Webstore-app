@@ -19,15 +19,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const timer = setTimeout(() => {
       if (!mounted) return;
       
-      // Simulate logged-in user - change loggedInUser to fakeUser to simulate logged-in state
-      const fakeUser: User = {
-        id: '1',
-        name: 'David Agochukwu',
-        email: 'agochukwudavid@gmail.com',
-      };
-      
+        //@ts-ignore
+
+
       // Set to null to simulate logged-out state
-      const loggedInUser = fakeUser; // Change to fakeUser to test logged-in state
+      const loggedInUser = null; 
       
       setUser(loggedInUser);
       setToken(loggedInUser ? 'fake-access-token' : null);
@@ -35,6 +31,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       
       // Sync with Redux
       if (loggedInUser) {
+        //@ts-ignore
         dispatch(setReduxUser({ user: loggedInUser, token: 'fake-access-token' }));
       } else {
         dispatch(clearReduxUser());
@@ -44,10 +41,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     return () => clearTimeout(timer);
   }, [dispatch]);
 
+//@ts-ignore
   const login = async (email: string, password: string) => {
     return new Promise<void>((resolve) => {
       setTimeout(() => {
-        const user = { id: '1', name: 'David Agochukwu', email };
+        const names = ['David Agochukwu', 'Sarah Smith', 'Michael Johnson'];
+        const randomName = names[Math.floor(Math.random() * names.length)] || 'David Agochukwu';
+        
+        const user = { id: '1', name: randomName, email };
         setUser(user);
         setToken('fake-access-token');
         dispatch(setReduxUser({ user, token: 'fake-access-token' }));
