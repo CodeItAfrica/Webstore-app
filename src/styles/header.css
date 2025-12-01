@@ -283,7 +283,8 @@
   }
 
   .nav-menu {
-    flex: 1;
+  width: 60%;
+  margin: auto;
     gap: 25px;
   }
 

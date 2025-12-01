@@ -1,0 +1,11 @@
+.ui-input {
+  width: 100%;
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border: 1px solid #e5e7eb; /* border-gray-200 */
+  border-radius: 0.5rem; /* rounded-lg */
+  outline: none;
+}
+
+.ui-input:focus {
+  border-color: #111827; /* focus:border-gray-900 */
+}

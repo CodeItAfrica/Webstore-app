@@ -1,0 +1,195 @@
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scaleY(1);
+  pointer-events: auto;
+}
+
+/* Arrow Animation */
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Base Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem 0;
+  min-width: 200px;
+  z-index: 1000;
+  display: block; /* Always block to allow transitions */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scaleY(0.9);
+  transform-origin: top center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+/* Mega Menu (Products) */
+.mega-menu {
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 90vw;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  position: fixed; /* Fixed to viewport or relative to header container if possible */
+  top: 80px; /* Adjust based on header height */
+}
+
+@media (max-width: 1024px) {
+  .mega-menu {
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95vw;
+    padding: 1rem;
+  }
+}
+
+.dropdown:hover .mega-menu {
+  transform: translateX(-50%) translateY(0);
+}
+
+.mega-column h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.mega-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mega-column li {
+  margin-bottom: 0.75rem;
+}
+
+.mega-column a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.mega-column a:hover {
+  color: #84cc16; /* oraimo green */
+}
+
+/* Hot & New Dropdown */
+.hot-new-menu {
+  min-width: 180px;
+}
+
+.hot-new-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.hot-new-menu a:hover {
+  background-color: #f9fafb;
+  color: #84cc16;
+}
+
+/* Support Dropdown */
+.support-menu {
+  min-width: 250px;
+  padding: 1rem;
+}
+
+.support-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: #333;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.support-item:hover {
+  background-color: #f9fafb;
+}
+
+.support-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.support-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Account Dropdown */
+.account-dropdown {
+  position: relative;
+}
+
+.account-menu {
+  right: 0;
+  left: auto;
+  width: 220px;
+}
+
+.account-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5rem;
+}
+
+.account-name {
+  font-weight: 700;
+  color: #111;
+  display: block;
+}
+
+.account-menu a {
+  display: block;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.account-menu a:hover {
+  color: #111;
+  background-color: #f9fafb;
+}
+
+.account-menu .logout {
+  border-top: 1px solid #eee;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}

@@ -135,7 +135,7 @@
 /* Desktop: Full height carousel */
 @media (min-width: 1024px) {
   .hero-carousel {
-    height: 70vh;
+    height: 85vh;
   }
 
   .carousel-nav {

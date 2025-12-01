@@ -1,0 +1,15 @@
+.ui-checkbox {
+  height: 1rem; /* h-4 */
+  width: 1rem; /* w-4 */
+  border-radius: 0.25rem; /* rounded */
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  color: #111827; /* text-gray-900 */
+  cursor: pointer;
+}
+
+.ui-checkbox:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* ring-gray-900 */
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #111827;
+}

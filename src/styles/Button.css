@@ -1,0 +1,36 @@
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* rounded-full */
+  font-weight: 600; /* font-semibold */
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms; /* transition-colors */
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.ui-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-button-primary {
+  background-color: #111827; /* bg-gray-900 */
+  color: #ffffff; /* text-white */
+}
+
+.ui-button-primary:hover {
+  background-color: #1f2937; /* hover:bg-gray-800 */
+}
+
+.ui-button-secondary {
+  background-color: #9ca3af; /* bg-gray-400 */
+  color: #ffffff; /* text-white */
+}
+
+.ui-button-secondary:hover {
+  background-color: #6b7280; /* hover:bg-gray-500 */
+}
